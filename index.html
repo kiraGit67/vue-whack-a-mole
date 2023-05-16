@@ -13,11 +13,11 @@
     <div id="app">
         <header>
             <h1>{{title}}</h1>
-            <p>Time left: {{seconds}} Seconds</p>
+            <p>Time left: <span :class="dangerStyle">{{seconds}}</span> Seconds</p>
         </header>
         <main>
             <button id="start-game" @click="startGame" :disabled="startButtonDisabled">{{buttonText}}</button>
-            <h2 v-if="seconds === 0">Your Score: {{score}}</h2>
+            <h2 v-if="seconds === 0">Your Score: <span :class="blinkyStyle">{{score}}</span></h2>
             <button id="mole-button" @click="whack()" :disabled="moleButtonDisabled"
                 :style="moveMoleStyle">Mole</button>
         </main>
