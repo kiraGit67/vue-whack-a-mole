@@ -39,6 +39,16 @@ Vue.createApp({
         100 * this.randomTopNumber
       }%;`;
     },
+    blinkyStyle() {
+      if (this.seconds === 0 && this.score >= 5) {
+        return "blink";
+      }
+    },
+    dangerStyle() {
+      if (this.seconds <= 3 && this.seconds > 0) {
+        return "danger";
+      }
+    },
   },
   watch: {
     seconds(newValue, oldValue) {
