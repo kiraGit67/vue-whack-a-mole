@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack A Mole - with Vue.js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>{{title}}</h1>
+            <p>Time left: {{seconds}} Seconds</p>
+        </header>
+        <main>
+            <button id="start-game" @click="startGame" :disabled="startButtonDisabled">{{buttonText}}</button>
+            <h2 v-if="seconds === 0">Your Score: {{score}}</h2>
+            <button id="mole-button" @click="whack()" :disabled="moleButtonDisabled"
+                :style="moveMoleStyle">Mole</button>
+        </main>
+    </div>
+    <script src="vue.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
