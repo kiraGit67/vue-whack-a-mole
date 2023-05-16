@@ -95,6 +95,31 @@ h2 {
   font-size: 1.75rem;
 }
 
+span.danger {
+  color: red;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+span.blink {
+  color: yellow;
+  font-size: 125%;
+  font-weight: 700;
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
 @media screen and (max-width: 767px) {
   header {
     flex-direction: column;
